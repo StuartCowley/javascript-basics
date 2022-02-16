@@ -1,5 +1,5 @@
-function sayHello (string) {
-  // your code here
+let sayHello = (string) => {
+  return "Hello, " + string + "!";
 };
 
 function uppercase (string) {
