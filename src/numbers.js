@@ -45,8 +45,10 @@ function absolute (a) {
 
 function quotient (a, b) {
   // your code here
+  if(a < 0 || b < 0) {
+    return Math.ceil(a / b);
+  }
   return Math.floor(a / b);
-
 }
 
 function remainder (a, b) {

@@ -86,20 +86,14 @@ function containsVowels(string) {
 
 function isLowerCase(string) {
   // your code here
-  const lowercase = ['abcdefghijklmnopqrstuv0123456789'];
-  let capitalCount = 0;
-  for (let i = 0; i < string.length; i += 1) {
-    for (let j = 0; j < lowercase.length; j += 1) {
-      if (string[i] !== lowercase[j]) {
-        capitalCount += 1;
-      }
-    }
-  }
-
-  if (capitalCount > 0) {
-    return false;
-  }
-  return true;
+  const up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  for(let i = 0; i < string.length; i += 1) {
+      for(let j = 0; j < up.length; j += 1) {
+          if(string[i] === up[j]) {
+              return false;
+          }
+      } 
+  } return true;
 }
 
 module.exports = {
@@ -118,4 +112,4 @@ module.exports = {
   startsWith,
   containsVowels,
   isLowerCase
-};
+}
