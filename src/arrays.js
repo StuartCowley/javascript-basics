@@ -69,6 +69,13 @@ const reverseWordsInArray = strings => {
 
 const onlyEven = numbers => {
   // your code here
+  const evenNums = [];
+  numbers.forEach(num => {
+    if(num % 2 === 0) {
+      evenNums.push(num)
+    }
+  })
+  return evenNums;
 };
 
 const removeNthElement2 = (index, array) => {
