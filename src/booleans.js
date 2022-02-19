@@ -1,61 +1,61 @@
 function negate(a) {
-  // your code here
+  return !a; //Logical NOT
 };
 
 function both(a, b) {
-  // your code here
+  return a && b;
 };
 
 function either(a, b) {
-  // your code here
+  return a || b;
 };
 
 function none(a, b) {
-  // your code here
+  return !(a || b); // Logical NOT
 };
 
 function one(a, b) {
-  // your code here
+  return a !== b; //If a does not strictly equal
 };
 
 function truthiness(a) {
-  // your code here
+  return !!a; // !! - check string if it is falsey.
 };
 
 function isEqual(a, b) {
-  // your code here
+  return a === b;
 };
 
 function isGreaterThan(a, b) {
-  // your code here
+  return a > b;
 };
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
+  return a <= b;
 };
 
 function isOdd(a) {
-  // your code here
+  return !!(a % 2); //! returns true if the object is false. If you negate it again you get true for values that exist and false for the ones that do not.
 };
 
 function isEven(a) {
-  // your code here
+  return !(a % 2); //! returns true if the object is false. If you negate it again you get true for values that exist and false for the ones that do not.
 };
 
 function isSquare(a) {
-  // your code here
+  return Number.isInteger(Math.sqrt(a)); // number.isinteger checks if number is integer (whole number remember) or if it isn't (false). Math.sqrt does what it says. 
 };
 
 function startsWith(char, string) {
-  // your code here
+  return string.charAt(0) === char;
 };
 
 function containsVowels(string) {
-  // your code here
+  return /[aeiouAEIOU]/.test(string); // RegExp.test(string) matches text with a pattern. RegExp - regular expression. Test executes search for a match between expression and string.
 };
 
 function isLowerCase(string) {
-  // your code here
+  return string === string.toLowerCase() && string !== string.toUpperCase(); // If string strictly equal to lower case AND string is strictly NOT EQUAL to uppercase.
 };
 
 module.exports = {
