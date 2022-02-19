@@ -128,7 +128,7 @@ describe('onlyEven', () => {
 });
 
 describe('removeNthElement2', () => {
-  xit('returns an array with the nth element removed, and does not mutate the original', () => {
+  it('returns an array with the nth element removed, and does not mutate the original', () => {
     const array = ['bike', 'car', 'train', 'bus'];
     expect(removeNthElement2(2, array)).toEqual(['bike', 'car', 'bus']);
     expect(array).toEqual(['bike', 'car', 'train', 'bus']);
@@ -139,7 +139,7 @@ describe('removeNthElement2', () => {
 });
 
 describe('elementsStartingWithAVowel', () => {
-  xit('returns elements starting with a vowel', () => {
+  it('returns elements starting with a vowel', () => {
     expect(
       elementsStartingWithAVowel([
         'apple',

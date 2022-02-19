@@ -71,19 +71,35 @@ const onlyEven = numbers => {
   // your code here
   const evenNums = [];
   numbers.forEach(num => {
-    if(num % 2 === 0) {
-      evenNums.push(num)
+    if (num % 2 === 0) {
+      evenNums.push(num);
     }
-  })
+  });
   return evenNums;
 };
 
 const removeNthElement2 = (index, array) => {
   // your code here
+  if (index === undefined) {
+    return array;
+  }
+  const newArr = [];
+  for (let i = 0; i < array.length; i += 1) {
+    newArr[i] = array[i];
+  }
+  newArr.splice(index, 1);
+  return newArr;
 };
 
 const elementsStartingWithAVowel = strings => {
   // your code here
+  const returnArr = [];
+  for (let i = 0; i < strings.length; i += 1) {
+    if (strings[i].search(/^[aeiou]/) >= 0) {
+      returnArr.push(strings[i]);
+    }
+  }
+  return returnArr;
 };
 
 const removeSpaces = string => {
