@@ -95,7 +95,7 @@ const elementsStartingWithAVowel = strings => {
   // your code here
   const returnArr = [];
   for (let i = 0; i < strings.length; i += 1) {
-    if (strings[i].search(/^[aeiou]/) >= 0) {
+    if (strings[i].search(/^[aeiou]/i) >= 0) {
       returnArr.push(strings[i]);
     }
   }
@@ -104,6 +104,8 @@ const elementsStartingWithAVowel = strings => {
 
 const removeSpaces = string => {
   // your code here
+  const array = string.split(' ');
+  return array.join('');
 };
 
 const sumNumbers = numbers => {

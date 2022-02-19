@@ -176,7 +176,7 @@ describe('elementsStartingWithAVowel', () => {
     ]);
   });
 
-  xit('is case insensitive', () => {
+  it('is case insensitive', () => {
     expect(
       elementsStartingWithAVowel([
         'Apple',
@@ -215,7 +215,7 @@ describe('elementsStartingWithAVowel', () => {
 });
 
 describe('removeSpaces', () => {
-  xit('returns the string with the space characters removed', () => {
+  it('returns the string with the space characters removed', () => {
     expect(removeSpaces('this string has spaces')).toEqual(
       'thisstringhasspaces'
     );
