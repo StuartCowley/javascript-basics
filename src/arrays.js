@@ -39,23 +39,25 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
-};
+  const arrays = [...array]; //Creates a new variable to stop mutation. Uses spread operator.
+  arrays.splice(index, 1) //As above in remove NthElement1.
+  return arrays; //Returns the const variable created. This was a real pain in the arse.
+}; //https://jaketrent.com/post/remove-array-element-without-mutating - really helpful site for this one.
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(vowel => /^[aeiouAEIOU]/.test(vowel)); //Same as booleans problem with one exception. Easy. Only difference is ^ is an assertion operator that matches the beginning of an input.
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s/g, ""); //Another regex as above. Had to look up /\s/g but otherwise - easy. \s is spaces and /g is a global flag for all white and not just first.
 };
 
 const sumNumbers = numbers => {
-  // your code here
-};
+  return numbers.reduce((a, b) => a + b) //Easy enough. 
+}; 
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort((a, b) => a.charCodeAt(a.length -1) - b.charCodeAt(b.length -1)); //Use charCodeAt. Returns a number associated with a character. Letters that occur later in the alphabet have higher value. Substack solution.
 };
 
 module.exports = {
