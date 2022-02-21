@@ -1,41 +1,41 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index % array.length]; //I get it, kind of. Just not 100%. Need to think a bit more. Maths stuff.
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString(array); //Easy.
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(`,`); //Splits the characters using what was given. Easy.
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element); //Add the element select to whatever array selected. Easy.
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element); //If you want to add the items of one array to another array. Essentially - firstArray.concat(secondArray):
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1); //I understood the splice function. Failed with the second paramter - for future note, the 2nd parameter means it removes one item only. 1 means remove only 1.
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(number => number.toString());; //.map creates a new array. This one uses a callbackFn to add values to new array. Still fuzzy, but works.
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(strings => strings.toUpperCase()); //SAme as above. Easy, now that you know....
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(strings => strings.split("").reverse().join("")) //This worked somehow creating a new array with map. FCC has good article on this but didn't use .map.
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(n => n % 2 === 0) //filter creates new element with all numbers that pass the parameter arrow function. Easy enough.
 };
 
 const removeNthElement2 = (index, array) => {
