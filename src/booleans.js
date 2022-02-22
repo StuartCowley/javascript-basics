@@ -1,13 +1,13 @@
-function negate(a) {
-  // your code here
+const negate = (a) => {
+  return !(a);
 };
 
-function both(a, b) {
-  // your code here
+const both = (a, b) => {
+  return (a && b);
 };
 
-function either(a, b) {
-  // your code here
+const either = (a, b) => {
+  return (a || b);
 };
 
 function none(a, b) {
