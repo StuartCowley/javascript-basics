@@ -1,9 +1,13 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index > array.length - 1) {
+    return (array[index - array.length]);
+  } else {
+  return array[index];
+  }
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
