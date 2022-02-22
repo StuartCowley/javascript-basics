@@ -30,21 +30,21 @@ const isEqual = (a, b) => {
   return (a === b);
 };
 
-function isGreaterThan(a, b) {
-  // your code here
+const isGreaterThan = (a, b) => {
+  return (a > b);
 };
 
-function isLessThanOrEqualTo(a, b) {
-  // your code here
+const  isLessThanOrEqualTo = (a, b) => {
+  return (a <= b);
 };
 
-function isOdd(a) {
-  // your code here
+const isOdd = (a) => {
+  return (a % 2 != 0);
 };
 
-function isEven(a) {
-  // your code here
-};
+const isEven = (a) => {
+  return (a % 2 == 0);
+}
 
 function isSquare(a) {
   // your code here
