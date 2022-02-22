@@ -46,20 +46,20 @@ const isEven = (a) => {
   return (a % 2 == 0);
 }
 
-function isSquare(a) {
-  // your code here
+const isSquare = (a) => {
+  return Math.sqrt(a) % 1 === 0;
 };
 
-function startsWith(char, string) {
-  // your code here
+const startsWith = (char, string) => {
+  return string.startsWith(char);
 };
 
-function containsVowels(string) {
-  // your code here
+const containsVowels = (string) => {
+  return string.match('a|e|i|o|u|A|E|I|O|U/i') ? true : false;
 };
 
-function isLowerCase(string) {
-  // your code here
+const isLowerCase = (string) => {
+  return string == string.toLowerCase() && string != string.toUpperCase();
 };
 
 module.exports = {
