@@ -20,43 +20,44 @@ const addToArray2 = (element, array) => {
 };
 
 const removeNthElement = (index, array) => {
-  return array.splice(index);
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  return numbersToStrings.map(numbers)
+  //return numbersToStrings.map(a)
+  return numbers.map(number => number.toString());
 };
 
 const uppercaseWordsInArray = strings => {
-  return string.toUpperCase();
+  return strings.map(name => name.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(name => name.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(item => item % 2 == 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.slice(0, index).concat(array.slice(index + 1));
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(string => /^[aeiou]/i.test(string));
 };
 
 const removeSpaces = string => {
-  
+  return string.replace(/\s+/g, '');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((t,n) => {return t+n});
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort ((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 };
 
 module.exports = {
