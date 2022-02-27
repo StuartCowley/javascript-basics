@@ -1,62 +1,122 @@
 function negate(a) {
-  // your code here
-};
+  return !a;
+}
 
 function both(a, b) {
-  // your code here
-};
+  //   if (a === true && b === true) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+  return a === true && b === true;
+}
 
 function either(a, b) {
-  // your code here
-};
+  if (a === true || b === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function none(a, b) {
-  // your code here
-};
+  if (a === false && b === false) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function one(a, b) {
-  // your code here
-};
+  if (a === true && b === false) {
+    return true;
+  } else if (a === false && b === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function truthiness(a) {
-  // your code here
-};
+  return Boolean(a);
+}
 
 function isEqual(a, b) {
-  // your code here
-};
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function isGreaterThan(a, b) {
-  // your code here
-};
+  if (a > b) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
-};
+  if (a <= b) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function isOdd(a) {
-  // your code here
-};
+  let remainder = a % 2;
+  if (remainder === 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function isEven(a) {
-  // your code here
-};
+  let remainder = a % 2;
+  if (remainder === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function isSquare(a) {
-  // your code here
-};
+  if (a >= 0 && Number.isInteger(Math.sqrt(a))) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function startsWith(char, string) {
-  // your code here
-};
+  if (string[0] === char) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function containsVowels(string) {
-  // your code here
-};
+  // return /[a-z]*[aeiou][a-z]*/i.test(string);
+  return /[aeiou]/i.test(string);
+  // return string.toLowerCase().includes('a', 'e', 'i', 'o', 'u');
+}
 
 function isLowerCase(string) {
-  // your code here
-};
+  // if (string.toLowerCase() === string) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  //   let a;
+  //   string.toLowerCase() === string ? (a = true) : (a = false);
+  //   return a;
+  // }
+  return string.toLowerCase() === string;
+}
 
 module.exports = {
   negate,
