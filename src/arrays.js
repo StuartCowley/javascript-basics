@@ -1,61 +1,93 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index > array.length - 1) {
+    index -= array.length;
+  }
+  return array[index];
 };
 
-const arrayToCSVString = array => {
-  // your code here
-};
+const arrayToCSVString = array => array.toString();
 
-const csvStringToArray = string => {
-  // your code here
-};
+const csvStringToArray = string => string.split(',');
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
-const addToArray2 = (element, array) => {
-  // your code here
-};
+const addToArray2 = (element, array) => array.concat(element);
 
-const removeNthElement = (index, array) => {
-  // your code here
-};
+const removeNthElement = (index, array) => array.splice(index, 1);
 
 const numbersToStrings = numbers => {
-  // your code here
+  const arr = numbers.map(item => {
+    return item.toString();
+  });
+  return arr;
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  const arr = strings.map(item => {
+    return item.toUpperCase();
+  });
+  return arr;
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  const arr = strings.map(item => {
+    return item
+      .split('')
+      .reverse()
+      .join('');
+  });
+  return arr;
 };
 
 const onlyEven = numbers => {
-  // your code here
+  const arr = numbers.filter(item => {
+    return item % 2 === 0;
+  });
+  return arr;
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const arr = array.filter((_, elementIndex) => elementIndex !== index);
+  return arr;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const arr = strings.filter(items => {
+    return (
+      items[0].includes('a') ||
+      items[0].includes('A') ||
+      items[0].includes('e') ||
+      items[0].includes('E') ||
+      items[0].includes('i') ||
+      items[0].includes('I') ||
+      items[0].includes('o') ||
+      items[0].includes('O') ||
+      items[0].includes('u') ||
+      items[0].includes('U')
+    );
+  });
+  return arr;
 };
 
 const removeSpaces = string => {
-  // your code here
+  const str = string.split(' ').join('');
+  return str;
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  const arr = numbers.reduce((total, item) => {
+    return item + total;
+  }, 0);
+  return arr;
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const arr = strings.sort((a, b) => {
+    return a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1);
+  });
+  return arr;
 };
 
 module.exports = {
