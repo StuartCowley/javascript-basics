@@ -43,19 +43,19 @@ function isEven(a) {
 };
 
 function isSquare(a) {
-  // your code here
+  return a>= 0 && Math.sqrt(a) % 1 === 0;
 };
 
 function startsWith(char, string) {
-  // your code here
+  return string.charAt(0) === char;
 };
 
 function containsVowels(string) {
-  // your code here
+  return /[aeiou]/i.test(string);
 };
 
 function isLowerCase(string) {
-  // your code here
+  return string === string.toLowerCase();
 };
 
 module.exports = {
