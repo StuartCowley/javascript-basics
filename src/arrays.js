@@ -48,15 +48,16 @@ const removeNthElement2 = (index, array) => {
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  return strings.filter(str => vowels.includes(str.charAt(0).toLowerCase()));
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((prev, current) => prev + current, 0)
 };
 
 const sortByLastLetter = strings => {
