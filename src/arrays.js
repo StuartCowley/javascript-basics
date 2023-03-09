@@ -1,61 +1,76 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index >= array.length){
+    index = index % array.length;
+  }
+  return array[index];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+   array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+ return numbers.toString().split(',');
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(str => str.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(str => str.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(num => num % 2 === 0)
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const newArray = [...array];
+  newArray.splice(index, 1);
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  return strings.filter(str => vowels.includes(str.charAt(0).toLowerCase()));
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((prev, current) => prev + current, 0)
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  strings.sort((a , b) => {
+    const lastLetterA = a.slice(-1);
+        const lastletterB = b.slice(-1);
+        if (lastLetterA < lastletterB){
+          return -1;
+        } else {
+          return 1;
+        }
+      })
+      return strings;
 };
 
 module.exports = {
