@@ -30,6 +30,7 @@ function round (a) {
 
 function roundUp (a) {
   // your code here
+  return Math.ceil(a);
 }
 
 function roundDown (a) {
