@@ -1,5 +1,5 @@
 function sayHello (string) {
-  // your code here
+  return 'Hello World!'
 };
 
 function uppercase (string) {
