@@ -15,11 +15,11 @@ function countCharacters (string) {
 }
 
 function firstCharacter (string) {
-  
+  return string.charAt(0);
 };
 
 function firstCharacters (string, n) {
-  // your code here
+  return string.charAt(n);
 };
 
 module.exports = {
