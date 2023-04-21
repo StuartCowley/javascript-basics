@@ -45,10 +45,16 @@ function absolute (a) {
 
 function quotient (a, b) {
   // your code here
+  let quotient2 = Math.floor(a / b);
+  if (a <0 && b >0 || a > 0 && b < 0) {
+     quotient2 += 1;
+  }
+  return quotient2;
 }
 
 function remainder (a, b) {
   // your code here
+  return a % b;
 }
 
 module.exports = {
