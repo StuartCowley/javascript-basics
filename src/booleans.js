@@ -10,6 +10,7 @@ function both(a, b) {
 
 function either(a, b) {
   // your code here
+  return a > 0 || b > 0;
 };
 
 function none(a, b) {
