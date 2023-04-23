@@ -15,6 +15,7 @@ function either(a, b) {
 
 function none(a, b) {
   // your code here
+  return !(a > 0 || b > 0);
 };
 
 function one(a, b) {
