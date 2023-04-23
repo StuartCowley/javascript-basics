@@ -1,9 +1,11 @@
 function negate(a) {
   // your code here
+  return !(a > 0);
 };
 
 function both(a, b) {
   // your code here
+  return a > 0 && b > 0;
 };
 
 function either(a, b) {
