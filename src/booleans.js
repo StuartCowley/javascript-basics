@@ -34,6 +34,7 @@ function truthiness(a) {
 
 function isEqual(a, b) {
   // your code here
+  return Boolean(a === b);
 };
 
 function isGreaterThan(a, b) {
