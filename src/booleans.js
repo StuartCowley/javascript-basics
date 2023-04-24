@@ -20,10 +20,17 @@ function none(a, b) {
 
 function one(a, b) {
   // your code here
+  if (a > 0 && b > 0) {
+    return false;
+  }
+  return a > 0 || b > 0;
 };
+  
+
 
 function truthiness(a) {
   // your code here
+
 };
 
 function isEqual(a, b) {
