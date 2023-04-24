@@ -54,6 +54,7 @@ function isOdd(a) {
 
 function isEven(a) {
   // your code here
+  return Boolean(a % 2 == 0);
 };
 
 function isSquare(a) {
