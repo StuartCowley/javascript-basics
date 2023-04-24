@@ -1,49 +1,51 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.toString().split(',');
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(word => word.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(word => word.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(num => num % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+
+  const newArray = array.filter((element, idx) => idx !== index);
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  
 };
 
 const removeSpaces = string => {
