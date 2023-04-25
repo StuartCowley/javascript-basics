@@ -39,17 +39,16 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-
   const newArray = array.filter((element, idx) => idx !== index);
   return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
-  
+  return strings.filter(words => /^[aeiou]/i.test(words));
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
