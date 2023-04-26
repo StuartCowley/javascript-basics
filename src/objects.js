@@ -15,11 +15,17 @@ const getProperty = (property, object) => {
 };
 
 const hasProperty = (property, object) => {
-  return object.hasOwn(object, property);
+  if (object.hasOwnProperty(property)) {
+    return true;
+  }
+  return false;
 };
 
 const isOver65 = person => {
-  // your code here
+  if (person.age > 65) {
+    return true;
+  }
+  return false;
 };
 
 const getAges = people => {
