@@ -71,7 +71,14 @@ function startsWith(char, string) {
 
 function containsVowels(string) {
   // your code here
-};
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  for (let i = 0; i < string.length; i += 1) {
+    if (vowels.includes(string[i])) {
+      return true;
+    }
+  }
+  return false;
+}
 
 function isLowerCase(string) {
   // your code here
