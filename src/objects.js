@@ -43,15 +43,15 @@ const findByName = (name, people) => {
 };
 
 const findHondas = cars => {
-  return Array.from(car1, car2, car3, car4);
+  const Hondas = [];
 
-  // const carArray = [car1, car2, car3, car4];
+  for (let i = 0; i < cars.length; i++) {
+    if (cars[i].manufacturer === 'Honda') {
+      Hondas.push(cars[i]);
+    }
+  }
 
-  // const carsHondas = carArray.filter(car => {
-  //   return car.manufacturer('Honda');
-  // });
-
-  // return carsHondas;
+  return Hondas;
 };
 
 const averageAge = people => {
@@ -69,7 +69,7 @@ const createTalkingPerson = (name, age) => {
     name,
     age,
     introduce
-  }
+  };
 
   // okay, so I need to set it so that the name and the age in the text are filled dynamically?
   // and also the name and age of the people, too?
