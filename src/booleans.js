@@ -82,7 +82,13 @@ function containsVowels(string) {
 
 function isLowerCase(string) {
   // your code here
-};
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] !== string[i].toLowerCase()) {
+      return false;
+    }
+  }
+  return true;
+}
 
 module.exports = {
   negate,
