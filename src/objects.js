@@ -33,19 +33,46 @@ const getAges = people => {
 };
 
 const findByName = (name, people) => {
-  // your code here
+  for (let i = 0; i < people.length; i++) {
+    const person = people[i];
+    if (person.name === name) {
+      return person;
+    }
+  }
+  return null;
 };
 
 const findHondas = cars => {
-  // your code here
+  return Array.from(car1, car2, car3, car4);
+
+  // const carArray = [car1, car2, car3, car4];
+
+  // const carsHondas = carArray.filter(car => {
+  //   return car.manufacturer('Honda');
+  // });
+
+  // return carsHondas;
 };
 
 const averageAge = people => {
-  // your code here
+  const average =
+    people.reduce((total, next) => total + next.age, 0) / people.length;
+  return average;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  function introduce(otherPersonName) {
+    return `Hi ${otherPersonName}, my name is ${name} and I am ${age}!`;
+  }
+
+  return {
+    name,
+    age,
+    introduce
+  }
+
+  // okay, so I need to set it so that the name and the age in the text are filled dynamically?
+  // and also the name and age of the people, too?
 };
 
 module.exports = {
