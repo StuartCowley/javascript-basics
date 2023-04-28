@@ -1,41 +1,78 @@
 const createPerson = (name, age) => {
-  // your code here
+  const newPerson = new Object();
+  newPerson.name = name;
+  newPerson.age = age;
+
+  return newPerson;
 };
 
 const getName = object => {
-  // your code here
+  return object.name;
 };
 
 const getProperty = (property, object) => {
-  // your code here
+  return object[property];
 };
 
 const hasProperty = (property, object) => {
-  // your code here
+  if (object.hasOwnProperty(property)) {
+    return true;
+  }
+  return false;
 };
 
 const isOver65 = person => {
-  // your code here
+  if (person.age > 65) {
+    return true;
+  }
+  return false;
 };
 
 const getAges = people => {
-  // your code here
+  return people.map(persons => persons.age);
 };
 
 const findByName = (name, people) => {
-  // your code here
+  for (let i = 0; i < people.length; i++) {
+    const person = people[i];
+    if (person.name === name) {
+      return person;
+    }
+  }
+  return null;
 };
 
 const findHondas = cars => {
-  // your code here
+  const Hondas = [];
+
+  for (let i = 0; i < cars.length; i++) {
+    if (cars[i].manufacturer === 'Honda') {
+      Hondas.push(cars[i]);
+    }
+  }
+
+  return Hondas;
 };
 
 const averageAge = people => {
-  // your code here
+  const average =
+    people.reduce((total, next) => total + next.age, 0) / people.length;
+  return average;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  function introduce(otherPersonName) {
+    return `Hi ${otherPersonName}, my name is ${name} and I am ${age}!`;
+  }
+
+  return {
+    name,
+    age,
+    introduce
+  };
+
+  // okay, so I need to set it so that the name and the age in the text are filled dynamically?
+  // and also the name and age of the people, too?
 };
 
 module.exports = {
