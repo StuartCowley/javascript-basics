@@ -57,10 +57,14 @@ const onlyEven = numbers => {
 
 const removeNthElement2 = (index, array) => {
   // your code here
+  const copy = [...array];
+  copy.splice(index, 1);
+  return copy;
 };
 
 const elementsStartingWithAVowel = strings => {
   // your code here
+  return strings.filter(words => /^[aeiou]/i.test(words));
 };
 
 const removeSpaces = string => {
