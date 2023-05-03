@@ -14,6 +14,7 @@ const getName = object => {
 
 const getProperty = (property, object) => {
   // your code here
+  return object[property];
 };
 
 const hasProperty = (property, object) => {
