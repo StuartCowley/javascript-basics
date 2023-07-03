@@ -1,25 +1,25 @@
 function sayHello (string) {
-  // your code here
+    return 'Hello, ' + string + '!';
+  };
+
+function uppercase(string) {
+  return string.toUpperCase();
 };
 
-function uppercase (string) {
-  // your code here
+function lowercase(string) {
+return string.toLowerCase();
 };
 
-function lowercase (string) {
-  // your code here
+function countCharacters(string) {
+ return string.length;
 };
 
-function countCharacters (string) {
-  // your code here
-};
-
-function firstCharacter (string) {
-  // your code here
+function firstCharacter(string) {
+  return string [0];
 };
 
 function firstCharacters (string, n) {
-  // your code here
+  return string.slice (0, n);
 };
 
 module.exports = {
